@@ -56,6 +56,8 @@ ENDL
 
     #chown -R wordpress: /usr/share/nginx/www/
     chown www-data:www-data /usr/share/nginx/www/wp-config.php
+    chown -R www-data:www-data /usr/share/nginx/www/wp-content
+    chmod -R 777 /usr/share/nginx/www/wp-content
     wp --allow-root core install --url=$URL  --title=$TITLE --admin_user=$USER --admin_email=$EMAIL --admin_password=$PASSWORD
 
 fi
